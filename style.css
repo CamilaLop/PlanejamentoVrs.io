@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@400;500;700&family=Fira+Sans:ital,wght@0,200;1,200&family=Lobster+Two&family=Open+Sans:wght@400;600&family=Roboto&family=Rubik+Vinyl&family=Solitreo&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+.container {
+  min-height: 100vs;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  width: 100%;
+  min-height: 100px;
+  background-color: #f4ead5;
+  background: linear-gradient(to bottom, #ebd4a1, #fffbe9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 30px;
+  gap: 8px 15px;
+}
+.logonavbar {
+  width: 180px;
+}
+.headerbutton {
+  display: flex;
+  gap: 15px;
+}
+.navbtn {
+  font-size: 16px;
+  padding: 6px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.navbtn:hover {
+  border-bottom: 2px solid black;
+}
+.sectiontitle {
+  background-color: #fffbe9;
+  font-size: 40px;
+  text-shadow: #292929;
+  font-family: "Caveat";
+  color: #865d29;
+  text-align: center;
+  padding-top: 20px;
+}
+.description {
+  text-align: center;
+  color: #383838;
+}
+.gridcontainer {
+  background-color: #fffbe9;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "maincontent sidebarcontent";
+  padding: 20px;
+  flex: 1 0 auto;
+}
+
+.maincontent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  grid-area: maincontent;
+}
+.categorycard:hover {
+  border-color: black;
+}
+.maincardimg {
+  background-color: #292929;
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+}
+.categorycard {
+  width: 280px;
+  height: 380px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.maincategorycardtitle {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 6px;
+}
+.maincategorymaindescription {
+  padding: 6px;
+}
+.sidebarcontent {
+  background-color: #f4ead5;
+  color: white;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+  grid-area: sidebarcontent;
+  gap: 20px;
+}
+.sidebarcard {
+  width: 75%;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.sidebarcardimg {
+  width: 100%;
+  border-radius: 10px;
+}
+.sidebarcard:hover {
+  border: 1px solid gainsboro;
+}
+.sidebarcardtitle {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 10px;
+}
+.footer {
+  width: 100%;
+  min-height: 40px;
+  background: linear-gradient(to bottom, #fffbe9, #ebd4a1);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  gap: 15px;
+}
+.logofooter {
+  width: 180px;
+}
+.footeranchor {
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  .gridcontainer {
+    grid-template-areas: "maincontent" "sidebarcontent";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .sidebarcontent {
+    min-width: auto;
+  }
+  .footeranchor {
+    font-size: 19px;
+  }
+}
+@media (max-width: 463px) {
+  .header {
+    justify-content: center;
+  }
+  .footer {
+    justify-content: center;
+  }
+}
